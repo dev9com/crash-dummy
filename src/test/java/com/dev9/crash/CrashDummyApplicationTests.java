@@ -1,5 +1,6 @@
 package com.dev9.crash;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,14 @@ public class CrashDummyApplicationTests {
     @Test(expected = StackOverflowError.class)
     public void stackOverflow() {
         StackOverflow sf = new StackOverflow();
+        sf.run();
+    }
+
+    /** Interestingly, does not cause failure on Java 8? */
+    @Ignore
+    @Test(expected = StackOverflowError.class)
+    public void heapOnStack() {
+        HeapOnStack sf = new HeapOnStack();
         sf.run();
     }
 
