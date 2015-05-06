@@ -36,7 +36,7 @@ public class CrashDummyApplicationTests {
     }
 
     @Test
-    @Ignore("Technically this test will kill your build as written.")
+    @Ignore("Technically this test will kill your build (or worse) as written.")
     public void doAllTheBadThings() {
         Map<String, BadThing> beansOfType = context.getBeansOfType(BadThing.class);
 
