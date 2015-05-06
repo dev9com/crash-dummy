@@ -1,5 +1,9 @@
-package com.dev9.crash;
+package com.dev9.crash.bad;
 
+import com.dev9.crash.BadThing;
+import org.springframework.stereotype.Service;
+
+@Service
 public class DivideNothing implements BadThing {
     public float divideByZero() {
         int x = 1;

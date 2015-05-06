@@ -1,10 +1,14 @@
-package com.dev9.crash;
+package com.dev9.crash.bad;
+
+import com.dev9.crash.BadThing;
+import org.springframework.stereotype.Service;
 
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.InputStream;
 import java.net.URL;
 
+@Service
 public class OpenConnections implements BadThing {
 
     static int bytesRead = 0;

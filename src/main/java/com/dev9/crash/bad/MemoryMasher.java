@@ -1,4 +1,6 @@
-package com.dev9.crash;
+package com.dev9.crash.bad;
+
+import com.dev9.crash.BadThing;
 
 import java.util.ArrayList;
 import java.util.List;

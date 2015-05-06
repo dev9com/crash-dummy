@@ -7,6 +7,8 @@ public interface BadThing {
 
     String badThingDescription();
 
-    /** Web safe URL identifier */
+    /**
+     * Web safe URL identifier
+     */
     String badThingId();
 }

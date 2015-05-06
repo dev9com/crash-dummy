@@ -1,5 +1,6 @@
 package com.dev9.crash;
 
+import com.dev9.crash.bad.StackOverflow;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +12,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -36,12 +38,12 @@ public class CrashDummyApplicationTests {
     @Test
     @Ignore("Technically this test will kill your build as written.")
     public void doAllTheBadThings() {
-        BadThingRegistry btr = BadThingRegistry.getBadThingRegistry();
+        Map<String, BadThing> beansOfType = context.getBeansOfType(BadThing.class);
 
         List<String> skipList = new ArrayList<>();
         skipList.add("Fill Up The Heap");
 
-        for (BadThing badThing : btr.badThings) {
+        for (BadThing badThing : beansOfType.values()) {
             System.out.println("Starting: " + badThing.badThingName());
 
             try {
@@ -53,6 +55,5 @@ public class CrashDummyApplicationTests {
                 e.printStackTrace();
             }
         }
-
     }
 }

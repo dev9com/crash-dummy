@@ -1,7 +1,11 @@
-package com.dev9.crash;
+package com.dev9.crash.bad;
+
+import com.dev9.crash.WebBadThing;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 
+@Service
 public class AllocateLargeSession implements WebBadThing {
 
     private static long attributeCount = 0;

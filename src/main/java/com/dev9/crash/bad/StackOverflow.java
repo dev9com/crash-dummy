@@ -1,4 +1,4 @@
-package com.dev9.crash;
+package com.dev9.crash.bad;
 
 public class StackOverflow implements Runnable {
 
