@@ -30,12 +30,4 @@ public class CrashDummyApplicationTests {
         sf.run();
     }
 
-    /** Interestingly, does not cause failure on Java 8? */
-    @Ignore
-    @Test(expected = StackOverflowError.class)
-    public void heapOnStack() {
-        HeapOnStack sf = new HeapOnStack();
-        sf.run();
-    }
-
 }
