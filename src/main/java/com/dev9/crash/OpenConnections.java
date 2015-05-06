@@ -8,11 +8,16 @@ import java.net.URL;
 public class OpenConnections implements BadThing {
 
     static int bytesRead = 0;
-    static String urlToRead = "http://localhost:8080/worst-app-ever/";
+    static String urlToRead = "http://localhost:8080/";
 
     public String badThingDescription() {
         return "Attempts to open a network connection to " + urlToRead + ". "
                 + bytesRead + " lines read so far.";
+    }
+
+    @Override
+    public String badThingId() {
+        return "open-network-connection";
     }
 
     public String badThingName() {

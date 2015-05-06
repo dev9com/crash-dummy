@@ -20,6 +20,11 @@ public class PermGenSmash {
                 return "Fills up the heap using an object with a local member variable that grows until OOM.";
             }
 
+            @Override
+            public String badThingId() {
+                return "fill-up-the-heap-object-local-member-oom";
+            }
+
             public String badThingName() {
                 return "Fill Up The Heap";
             }
@@ -40,6 +45,10 @@ public class PermGenSmash {
             public String badThingName() {
                 return "Fill Up The Heap On The Stack";
             }
+            @Override
+            public String badThingId() {
+                return "fill-up-the-heap-object-local-method-stack-oom";
+            }
 
             public String doBadThing() throws Exception {
                 MemoryMasher mm = new MemoryMasher();
@@ -51,6 +60,11 @@ public class PermGenSmash {
 
             public String badThingDescription() {
                 return "Fills up the heap using a static method and static variable.  Calls a clear method at the end (or else system would just die).";
+            }
+
+            @Override
+            public String badThingId() {
+                return "fill-up-the-heap-static-and-clear-oom";
             }
 
             public String badThingName() {
@@ -74,6 +88,12 @@ public class PermGenSmash {
                         + " Does not clear at the end. WARNING: This will probably "
                         + "lock your GUI and kill your server.";
             }
+
+            @Override
+            public String badThingId() {
+                return "fill-up-the-heap-static-no-clear-die";
+            }
+
 
             public String badThingName() {
                 return "Fill Up The Heap Statically and Just Die Horribly";

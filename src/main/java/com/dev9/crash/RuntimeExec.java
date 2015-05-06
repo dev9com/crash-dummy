@@ -35,6 +35,11 @@ public class RuntimeExec {
                 return "Attempts to run the Unix command " + UnixCommand + ".";
             }
 
+            @Override
+            public String badThingId() {
+                return "run-unix-command";
+            }
+
             public String badThingName() {
                 return "Unix Command Execution";
             }
@@ -48,6 +53,11 @@ public class RuntimeExec {
 
             public String badThingDescription() {
                 return "Attempts to run the Windows command " + WindowsCommand + ".";
+            }
+
+            @Override
+            public String badThingId() {
+                return "run-windows-command";
             }
 
             public String badThingName() {

@@ -19,6 +19,11 @@ public class AllocateGraphics implements BadThing {
         return "Created Window.";
     }
 
+    @Override
+    public String badThingId() {
+        return "create-gui-window";
+    }
+
     class SingleFrame extends Frame {
         public SingleFrame() {
             super("Single Frame - A Server Generated Window");

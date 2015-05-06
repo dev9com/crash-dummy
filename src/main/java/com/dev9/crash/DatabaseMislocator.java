@@ -22,6 +22,11 @@ public class DatabaseMislocator {
                 return "Mythical JDBC Driver";
             }
 
+            @Override
+            public String badThingId() {
+                return "bogus-jdbc-driver";
+            }
+
             public String doBadThing() throws Exception {
                 new DatabaseMislocator().testCantFindDriver();
                 return null;
@@ -32,6 +37,11 @@ public class DatabaseMislocator {
 
             public String badThingDescription() {
                 return "Looks for a meaningless JDBC connection string for a valid (hsqldb) driver.";
+            }
+
+            @Override
+            public String badThingId() {
+                return "bogus-jdbc-connection-string";
             }
 
             public String badThingName() {
@@ -52,6 +62,12 @@ public class DatabaseMislocator {
                         + password + ") and execute meaningless SQL. ";
                 return result;
             }
+
+            @Override
+            public String badThingId() {
+                return "bad-sql";
+            }
+
 
             public String badThingName() {
                 return "Execute Meaningless SQL (SELECT asdf)";
@@ -77,6 +93,12 @@ public class DatabaseMislocator {
                         + "WARNING: May lock up your GUI.";
                 return result;
             }
+
+            @Override
+            public String badThingId() {
+                return "open-as-many-jdbc-connections-as-possible";
+            }
+
 
             public String badThingName() {
                 return "Opens connections until death";

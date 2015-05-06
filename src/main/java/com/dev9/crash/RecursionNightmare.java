@@ -6,6 +6,11 @@ public class RecursionNightmare implements BadThing {
         return selfCaller(x);
     }
 
+    @Override
+    public String badThingId() {
+        return "infinite-recursion-stack-oom";
+    }
+
     public String badThingDescription() {
         return "A method calls itself over and over until it runs out of stack memory.";
     }

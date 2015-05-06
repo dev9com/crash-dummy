@@ -18,6 +18,11 @@ public class OpenAsManyConnectionsAsPossible implements BadThing {
                 + " lines read so far. WARNING: May lock up your GUI.";
     }
 
+    @Override
+    public String badThingId() {
+        return "open-network-connections-as-possible";
+    }
+
     public String badThingName() {
         return "Open As Many Network Connections As Possible";
     }

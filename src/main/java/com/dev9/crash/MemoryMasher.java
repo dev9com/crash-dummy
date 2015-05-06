@@ -14,6 +14,11 @@ public class MemoryMasher {
                 return "Fills up the heap using an object with a local member variable that grows until OOM.";
             }
 
+            @Override
+            public String badThingId() {
+                return "fill-up-the-heap";
+            }
+
             public String badThingName() {
                 return "Fill Up The Heap";
             }
@@ -31,6 +36,11 @@ public class MemoryMasher {
                 return "Fills up the heap using an object with a local method. This method allocates an object on the stack which grows until OOM.";
             }
 
+            @Override
+            public String badThingId() {
+                return "fill-up-the-heap-on-the-stack";
+            }
+
             public String badThingName() {
                 return "Fill Up The Heap On The Stack";
             }
@@ -45,6 +55,11 @@ public class MemoryMasher {
 
             public String badThingDescription() {
                 return "Fills up the heap using a static method and static variable.  Calls a clear method at the end (or else system would just die).";
+            }
+
+            @Override
+            public String badThingId() {
+                return "fill-up-the-heap-static-and-clear";
             }
 
             public String badThingName() {
@@ -67,6 +82,11 @@ public class MemoryMasher {
                 return "Fills up the heap using a static method and static variable. "
                         + " Does not clear at the end. WARNING: This will probably "
                         + "lock your GUI and kill your server.";
+            }
+
+            @Override
+            public String badThingId() {
+                return "fill-up-the-heap-static-and-die";
             }
 
             public String badThingName() {

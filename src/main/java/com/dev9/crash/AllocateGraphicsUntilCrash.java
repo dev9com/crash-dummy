@@ -11,6 +11,11 @@ public class AllocateGraphicsUntilCrash implements BadThing {
         return "Attempts to create MANY windows - until crashing.  WARNING: May lock up your GUI.";
     }
 
+    @Override
+    public String badThingId() {
+        return "create-windows-until-death";
+    }
+
     public String badThingName() {
         return "Create As Many Windows As Possible";
     }

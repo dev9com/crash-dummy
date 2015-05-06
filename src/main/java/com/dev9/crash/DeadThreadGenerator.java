@@ -24,6 +24,12 @@ public class DeadThreadGenerator implements BadThing {
         count++;
     }
 
+    @Override
+    public String badThingId() {
+        return "generate-deadlock-threads";
+    }
+
+
     public String badThingDescription() {
         return "Each time this bad thing is run, it generates a new pair of mutually deadlocked threads. This has been done "
                 + count + " times on this JVM already.";

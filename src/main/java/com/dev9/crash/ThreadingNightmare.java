@@ -41,6 +41,12 @@ public class ThreadingNightmare implements BadThing {
         return tooManyGroup;
     }
 
+    @Override
+    public String badThingId() {
+        return "generate-n-threads";
+    }
+
+
     public String badThingDescription() {
         try {
             String result = "Generate and run "

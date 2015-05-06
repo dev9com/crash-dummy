@@ -8,6 +8,12 @@ public class DivideNothing implements BadThing {
         return z;
     }
 
+    @Override
+    public String badThingId() {
+        return "divide-by-zero";
+    }
+
+
     public String badThingDescription() {
         return "Attempts to divide the number one by zero.";
     }

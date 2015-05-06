@@ -9,6 +9,11 @@ public class NullPointerMaker implements BadThing {
         return "Generates a typical null pointer error.";
     }
 
+    @Override
+    public String badThingId() {
+        return "generate-null-pointer-exception";
+    }
+
     public String badThingName() {
         return "Generate NullPointerException";
     }

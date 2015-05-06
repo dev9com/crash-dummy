@@ -12,6 +12,11 @@ public class AllocateLargeSession implements WebBadThing {
                 + " lumps have been associated with sessions.";
     }
 
+    @Override
+    public String badThingId() {
+        return "put-data-in-user-session";
+    }
+
     public String badThingName() {
         return "Allocate Lots of Session Data";
     }
