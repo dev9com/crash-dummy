@@ -29,17 +29,17 @@ public class DeadThreadGenerator implements BadThing {
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "generate-deadlock-threads";
     }
 
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Each time this bad thing is run, it generates a new pair of mutually deadlocked threads. This has been done "
                 + count + " times on this JVM already.";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Deadlocked Thread Generator";
     }
 

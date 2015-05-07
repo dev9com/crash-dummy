@@ -8,16 +8,16 @@ public class RunUnixCommand implements BadThing {
 
     private static String UnixCommand = "ls";
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Attempts to run the Unix command " + UnixCommand + ".";
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "run-unix-command";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Unix Command Execution";
     }
 

@@ -11,17 +11,17 @@ public class AllocateLargeSession implements WebBadThing {
     private static long attributeCount = 0;
     HttpServletRequest request;
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Places a very large lump of data in the user session.  Currently " + attributeCount
                 + " lumps have been associated with sessions.";
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "put-data-in-user-session";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Allocate Lots of Session Data";
     }
 

@@ -9,11 +9,11 @@ import java.awt.event.WindowEvent;
 
 @Service
 public class AllocateGraphics implements BadThing {
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Attempts to create a window.";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Create A Window";
     }
 
@@ -24,7 +24,7 @@ public class AllocateGraphics implements BadThing {
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "create-gui-window";
     }
 

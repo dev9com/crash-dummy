@@ -44,13 +44,13 @@ public class CrashDummyApplicationTests {
         skipList.add("Fill Up The Heap");
 
         for (BadThing badThing : beansOfType.values()) {
-            System.out.println("Starting: " + badThing.badThingName());
+            System.out.println("Starting: " + badThing.getBadThingName());
 
             try {
-                if (!skipList.contains(badThing.badThingName()))
+                if (!skipList.contains(badThing.getBadThingName()))
                     badThing.doBadThing();
                 else
-                    System.out.println("Skipping: " + badThing.badThingName());
+                    System.out.println("Skipping: " + badThing.getBadThingName());
             } catch (Exception e) {
                 e.printStackTrace();
             }

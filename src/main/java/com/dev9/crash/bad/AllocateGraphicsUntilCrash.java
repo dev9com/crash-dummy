@@ -11,16 +11,16 @@ import java.awt.event.WindowEvent;
 public class AllocateGraphicsUntilCrash implements BadThing {
     private static int count = 0;
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Attempts to create MANY windows - until crashing.  WARNING: May lock up your GUI.";
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "create-windows-until-death";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Create As Many Windows As Possible";
     }
 

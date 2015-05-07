@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class OpenJdbcConnUntilDie implements BadThing {
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         String result = "Looks for a valid driver ("
                 + DatabaseMislocator.driver
                 + ") and connection string ("
@@ -21,12 +21,12 @@ public class OpenJdbcConnUntilDie implements BadThing {
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "open-as-many-jdbc-connections-as-possible";
     }
 
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Opens connections until death";
     }
 

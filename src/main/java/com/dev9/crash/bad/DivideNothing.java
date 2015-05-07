@@ -13,16 +13,16 @@ public class DivideNothing implements BadThing {
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "divide-by-zero";
     }
 
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Attempts to divide the number one by zero.";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Divide By Zero";
     }
 

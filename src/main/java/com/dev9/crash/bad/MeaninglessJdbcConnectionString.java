@@ -6,16 +6,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class MeaninglessJdbcConnectionString implements BadThing {
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Looks for a meaningless JDBC connection string for a valid (hsqldb) driver.";
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "bogus-jdbc-connection-string";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Gibberish JDBC URL";
     }
 

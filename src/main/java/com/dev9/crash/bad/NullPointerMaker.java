@@ -9,16 +9,16 @@ public class NullPointerMaker implements BadThing {
         new Person().getName().toString();
     }
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Generates a typical null pointer error.";
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "generate-null-pointer-exception";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Generate NullPointerException";
     }
 

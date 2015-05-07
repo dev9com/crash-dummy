@@ -11,15 +11,15 @@ public class RecursionNightmare implements BadThing {
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "infinite-recursion-stack-oom";
     }
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "A method calls itself over and over until it runs out of stack memory.";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Infinite Recursion (Stack Out Of Memory)";
     }
 

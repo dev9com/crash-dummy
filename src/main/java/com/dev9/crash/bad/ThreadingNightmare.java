@@ -46,12 +46,12 @@ public class ThreadingNightmare implements BadThing {
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "generate-n-threads";
     }
 
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         try {
             String result = "Generate and run "
                     + numberOfThreads
@@ -75,7 +75,7 @@ public class ThreadingNightmare implements BadThing {
         }
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         try {
             return "Generate and Run Many Threads";
         } catch (Exception e) {

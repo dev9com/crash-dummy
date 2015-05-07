@@ -8,16 +8,16 @@ class RunWindowsCommand implements BadThing {
 
     static String WindowsCommand = "cmd /c dir";
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Attempts to run the Windows command " + WindowsCommand + ".";
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "run-windows-command";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Windows Command Execution";
     }
 

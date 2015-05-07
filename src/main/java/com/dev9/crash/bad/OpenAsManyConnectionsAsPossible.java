@@ -16,18 +16,18 @@ public class OpenAsManyConnectionsAsPossible implements BadThing {
     public String urlToRead = "http://localhost:8080/worst-app-ever/";
     int bytesRead = 0;
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Attempts to open as many network connections as possible to "
                 + urlToRead + ". " + bytesRead
                 + " lines read so far. WARNING: May lock up your GUI.";
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "open-network-connections-as-possible";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Open As Many Network Connections As Possible";
     }
 

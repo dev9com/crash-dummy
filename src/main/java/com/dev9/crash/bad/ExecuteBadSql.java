@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ExecuteBadSql implements BadThing {
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         String result = "Looks for a valid driver (" + DatabaseMislocator.driver
                 + ") and connection string (" + DatabaseMislocator.url
                 + ") using username/password (" + DatabaseMislocator.username + ","
@@ -15,12 +15,12 @@ public class ExecuteBadSql implements BadThing {
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "bad-sql";
     }
 
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Execute Meaningless SQL (SELECT asdf)";
     }
 

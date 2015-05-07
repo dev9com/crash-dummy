@@ -6,16 +6,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class BogusJdbcDriver implements BadThing {
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Looks for a made-up driver.";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Mythical JDBC Driver";
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "bogus-jdbc-driver";
     }
 

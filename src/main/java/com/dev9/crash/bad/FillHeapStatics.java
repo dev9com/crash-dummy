@@ -6,19 +6,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class FillHeapStatics implements BadThing {
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Fills up the heap using a static method and static variable. "
                 + " Does not clear at the end. WARNING: This will probably "
                 + "lock your GUI and kill your server.";
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "fill-up-the-heap-static-no-clear-die";
     }
 
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Fill Up The Heap Statically and Just Die Horribly";
     }
 

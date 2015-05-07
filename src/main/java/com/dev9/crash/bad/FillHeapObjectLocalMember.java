@@ -6,16 +6,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class FillHeapObjectLocalMember implements BadThing {
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Fills up the heap using an object with a local member variable that grows until OOM.";
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "fill-up-the-heap-object-local-member-oom";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Fill Up The Heap";
     }
 

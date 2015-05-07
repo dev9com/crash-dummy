@@ -3,12 +3,12 @@ package com.dev9.crash;
 public interface BadThing {
     String doBadThing() throws Exception;
 
-    String badThingName();
+    String getBadThingName();
 
-    String badThingDescription();
+    String getBadThingDescription();
 
     /**
      * Web safe URL identifier
      */
-    String badThingId();
+    String getBadThingId();
 }

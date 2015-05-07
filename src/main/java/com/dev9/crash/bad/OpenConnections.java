@@ -14,17 +14,17 @@ public class OpenConnections implements BadThing {
     static int bytesRead = 0;
     static String urlToRead = "http://localhost:8080/";
 
-    public String badThingDescription() {
+    public String getBadThingDescription() {
         return "Attempts to open a network connection to " + urlToRead + ". "
                 + bytesRead + " lines read so far.";
     }
 
     @Override
-    public String badThingId() {
+    public String getBadThingId() {
         return "open-network-connection";
     }
 
-    public String badThingName() {
+    public String getBadThingName() {
         return "Open Network Connection";
     }
 
