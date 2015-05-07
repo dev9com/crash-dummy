@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Hello Spring Boot!</title>
+    <title>Crash Dummy</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<p>Hello Spring Boot!</p>
-
+<h1>Welcome to Crash Dummy!</h1>
 <table>
     <tr th:each="bad : ${allBadThings}">
         <td th:text="${{bad.badThingId}}">
             bad-thing-id
         </td>
 
+        <td th:text="${{bad.badThingDescription}}">
+            bad-thing-description
+        </td>
+
         <td>
             <form action="#" th:action="@{/crash}" th:object="${homeController}" method="post">
-            <button type="do=-it" name="id"
-                    th:value="${{bad.badThingId}}"
-                    th:text="${{bad.badThingId}}">Go
-            </button>
+                <button type="submit" name="id"
+                        th:value="${{bad.badThingId}}"
+                        th:text="${{bad.badThingId}}">Go
+                </button>
             </form>
-
         </td>
 
     </tr>
