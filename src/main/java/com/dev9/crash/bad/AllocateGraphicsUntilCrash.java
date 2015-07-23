@@ -1,6 +1,6 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.BadThing;
+import com.dev9.crash.AbstractBadThing;
 import org.springframework.stereotype.Service;
 
 import java.awt.*;
@@ -8,7 +8,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 @Service
-public class AllocateGraphicsUntilCrash implements BadThing {
+public class AllocateGraphicsUntilCrash extends AbstractBadThing {
     private static int count = 0;
 
     public String getBadThingDescription() {

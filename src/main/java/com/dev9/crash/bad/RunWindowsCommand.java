@@ -1,10 +1,10 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.BadThing;
+import com.dev9.crash.AbstractBadThing;
 import org.springframework.stereotype.Service;
 
 @Service
-class RunWindowsCommand implements BadThing {
+class RunWindowsCommand extends AbstractBadThing {
 
     static String WindowsCommand = "cmd /c dir";
 

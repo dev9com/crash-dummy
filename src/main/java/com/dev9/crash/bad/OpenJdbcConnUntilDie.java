@@ -1,10 +1,10 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.BadThing;
+import com.dev9.crash.AbstractBadThing;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OpenJdbcConnUntilDie implements BadThing {
+public class OpenJdbcConnUntilDie extends AbstractBadThing {
 
     public String getBadThingDescription() {
         String result = "Looks for a valid driver ("

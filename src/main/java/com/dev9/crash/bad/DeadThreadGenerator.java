@@ -1,10 +1,10 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.BadThing;
+import com.dev9.crash.AbstractBadThing;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DeadThreadGenerator implements BadThing {
+public class DeadThreadGenerator extends AbstractBadThing {
 
     static int count = 0;
     Friend alpha = new Friend("Alpha");

@@ -1,10 +1,10 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.BadThing;
+import com.dev9.crash.AbstractBadThing;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RecursionNightmare implements BadThing {
+public class RecursionNightmare extends AbstractBadThing {
     public int selfCaller(int i) {
         int x = i + 1;
         return selfCaller(x);

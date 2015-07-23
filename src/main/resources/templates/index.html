@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Hello Spring Boot!</title>
+    <title>Crash Dummy</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<p>Hello Spring Boot!</p>
+<h1>Crash Dummy</h1>
 
 <table>
+    <tr>
+        <td>Item</td>
+        <td>Action</td>
+    </tr>
     <tr th:each="bad : ${allBadThings}">
         <td th:text="${{bad.badThingId}}">
             bad-thing-id
@@ -15,10 +19,10 @@
 
         <td>
             <form action="#" th:action="@{/crash}" th:object="${homeController}" method="post">
-            <button type="do=-it" name="id"
-                    th:value="${{bad.badThingId}}"
-                    th:text="${{bad.badThingId}}">Go
-            </button>
+                <button type="submit" name="id"
+                        th:value="${{bad.badThingId}}"
+                        th:text="${{bad.badThingId}}">Go
+                </button>
             </form>
 
         </td>

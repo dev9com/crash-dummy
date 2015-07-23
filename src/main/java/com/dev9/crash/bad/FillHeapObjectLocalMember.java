@@ -1,10 +1,10 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.BadThing;
+import com.dev9.crash.AbstractBadThing;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FillHeapObjectLocalMember implements BadThing {
+public class FillHeapObjectLocalMember extends AbstractBadThing {
 
     public String getBadThingDescription() {
         return "Fills up the heap using an object with a local member variable that grows until OOM.";

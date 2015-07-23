@@ -1,10 +1,10 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.BadThing;
+import com.dev9.crash.AbstractBadThing;
 import org.springframework.stereotype.Service;
 
 @Service
-public class NullPointerMaker implements BadThing {
+public class NullPointerMaker extends AbstractBadThing {
     public void generateNullPointer() {
         new Person().getName().toString();
     }

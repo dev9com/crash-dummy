@@ -1,5 +1,7 @@
 package com.dev9.crash;
 
+import javax.servlet.http.HttpServletRequest;
+
 public interface BadThing {
     String doBadThing() throws Exception;
 
@@ -11,4 +13,6 @@ public interface BadThing {
      * Web safe URL identifier
      */
     String getBadThingId();
+
+    void setHttpRequest(HttpServletRequest request);
 }
