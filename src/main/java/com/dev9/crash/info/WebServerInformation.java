@@ -91,15 +91,17 @@ public class WebServerInformation extends InformationFormatter {
         values.put("serverName", request.getServerName());
         values.put("servletPath", request.getServletPath());
         values.put("contentLength", request.getContentLength() + "");
-        for (Cookie cookie : request.getCookies()) {
-            values.put("cookie." + cookie.getName() + ".comment", cookie.getComment());
-            values.put("cookie." + cookie.getName() + ".domain", cookie.getDomain());
-            values.put("cookie." + cookie.getName() + ".path", cookie.getPath());
-            values.put("cookie." + cookie.getName() + ".value", cookie.getValue());
-            values.put("cookie." + cookie.getName() + ".maxAge", cookie.getMaxAge() + "");
-            values.put("cookie." + cookie.getName() + ".secure", cookie.getSecure() + "");
-            values.put("cookie." + cookie.getName() + ".maxAge", cookie.getVersion() + "");
-        }
+
+        if (request.getCookies() != null)
+            for (Cookie cookie : request.getCookies()) {
+                values.put("cookie." + cookie.getName() + ".comment", cookie.getComment());
+                values.put("cookie." + cookie.getName() + ".domain", cookie.getDomain());
+                values.put("cookie." + cookie.getName() + ".path", cookie.getPath());
+                values.put("cookie." + cookie.getName() + ".value", cookie.getValue());
+                values.put("cookie." + cookie.getName() + ".maxAge", cookie.getMaxAge() + "");
+                values.put("cookie." + cookie.getName() + ".secure", cookie.getSecure() + "");
+                values.put("cookie." + cookie.getName() + ".maxAge", cookie.getVersion() + "");
+            }
         Enumeration<Locale> locales = request.getLocales();
         int i = 0;
         while (locales.hasMoreElements()) {
