@@ -7,12 +7,9 @@
 <body>
 <h1>Crash Dummy Crash Result</h1>
 
-<!--  As we are using Thymeleaf, you might consider using
-      ${#httpServletRequest.requestURL}. But that returns the path
-      to this error page.  Hence we explicitly add the url to the
-      Model in some of the example code. -->
 <p th:if="${url}">
-    <b>Page:</b> <span th:text="${url}">Page URL</span>
+
+<div th:utext="'Failed URL: ' +  ${url}" th:remove="tag">${url}</div>
 </p>
 
 <p th:if="${timestamp}" id='created'>
@@ -24,22 +21,20 @@
         th:if="${error}" th:text="'('+${error}+')'">error ...</span>
 </p>
 
-<p>Application has encountered an error. Please contact support on
-    ...</p>
+<p><a href="/">Return To Main Page</a></p>
 
-<p>Support may ask you to right click to view page source.</p>
+<th:block th:if="${exceptions}">
 
-<div th:utext="'Failed URL: ' +  ${url}" th:remove="tag">${url}</div>
+    <p th:each="exception : ${exceptions}">
 
-<th:block th:if="${exception}">
-    <p>
-    <textarea style="width: 90%" rows="50">
+    <textarea style="width: 95%" rows="50">
     <div th:utext="'Exception: ' + ${exception.message}" th:remove="tag">${exception.message}</div>
     <ul th:remove="tag">
         <li th:each="ste : ${exception.stackTrace}" th:remove="tag"><span
                 th:utext="${ste}" th:remove="tag">${ste}</span></li>
     </ul>
     </textarea>
+
     </p>
 </th:block>
 </body>

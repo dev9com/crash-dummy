@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -35,7 +36,7 @@ class HomeController {
     }
 
     @RequestMapping("/crash")
-    String crash(@RequestParam(value = "id") String id, Model model) throws Exception {
+    String crash(@RequestParam(value = "id") String id, Model model, HttpServletRequest request) throws Exception {
 
         System.out.println("Got a crash request for " + id);
 
@@ -50,6 +51,8 @@ class HomeController {
             model.addAttribute("crash", "Can't find " + id);
             return "crash";
         }
+
+        found.setHttpRequest(request);
 
         String result = found.doBadThing();
 
