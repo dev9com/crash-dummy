@@ -6,6 +6,10 @@ import java.security.ProtectionDomain;
 public class ClassFileLocator {
     public String find(String canonicalName) {
         Class clazz = null;
+
+        if(canonicalName == null)
+            return "No class specified.";
+
         try {
             clazz = Class.forName(canonicalName);
         } catch (ClassNotFoundException e) {
