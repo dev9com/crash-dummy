@@ -1,37 +1,20 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Crash Result</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<p>Crash!</p>
-
-Boom!
+<p>Command Executed</p>
 
 <p th:text="${{result}}">
     bad-thing-id
 </p>
 
+<p th:text="${crash}"/>
+
+
 <a href="/">Return to main page</a>
 
 </body>
 </html>
-
-=======
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Crash Dummy Result</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
-<body>
-<h1>Crash Dummy Crash Result</h1>
-
-<p th:text="${crash}"/>
-
-<p><a href="/">Return To Main Page</a></p>
-
-</body>
-</html>
->>>>>>> origin/master

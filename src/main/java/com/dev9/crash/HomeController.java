@@ -7,13 +7,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-<<<<<<< HEAD
-import org.springframework.web.bind.annotation.RequestMethod;
-=======
 import org.springframework.web.bind.annotation.RequestParam;
->>>>>>> origin/master
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -44,39 +39,6 @@ public class HomeController {
         return context.getBeansOfType(BadThing.class);
     }
 
-<<<<<<< HEAD
-    BadThing byId(String id) {
-        for (BadThing badThing : allBadThings()) {
-            if (badThing.getBadThingId().equalsIgnoreCase(id))
-                return badThing;
-        }
-        return null;
-    }
-
-    private String result;
-
-    @RequestMapping(value = "/crash", method = RequestMethod.POST)
-    String crash(String id) throws Exception {
-        BadThing crash = byId(id);
-        if (crash != null) {
-            log.info("Started {}", id);
-            result = crash.doBadThing();
-            log.info("Finished {}", id);
-        } else {
-            log.info("Can't find {}", id);
-        }
-
-        return "crash";
-    }
-
-    @ModelAttribute("result")
-    public String getResult() {
-        return result;
-    }
-
-    public void setResult(String result) {
-        this.result = result;
-=======
     @RequestMapping("/crash")
     String crash(@RequestParam(value = "id") String id, Model model, HttpServletRequest request) throws Exception {
 
@@ -104,6 +66,5 @@ public class HomeController {
             model.addAttribute("crash", "Run " + id + " successfully.");
 
         return "crash";
->>>>>>> origin/master
     }
 }
