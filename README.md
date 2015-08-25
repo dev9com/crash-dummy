@@ -32,8 +32,12 @@ To build the app, just run the following command:
 To run the app, run the following command:
 
     mvn spring-boot:run
+
+Once the server is running, just hit http://localhost:8080 to start crashing!
     
-Use at your own risk!
+Obviously, use at your own risk!  JDK 8 on my MacBook Pro is pretty darn solid, but some of these crashes can take down
+your entire machine on older JVMs.  Some of them (e.g. the allocate windows until crash) used to wedge my machine
+hard enough to require a hard restart.  Whee!
 
 This is a simple Spring Boot app, so you can check the Spring Boot docs and do things like convert this to a WAR
 you can drop into your app server.
