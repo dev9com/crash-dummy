@@ -1,10 +1,10 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.BadThing;
+import com.dev9.crash.AbstractBadThing;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ThreadingNightmare implements BadThing {
+public class ThreadingNightmare extends AbstractBadThing {
 
     static ThreadGroup tooManyGroup = new ThreadGroup(
             "Too Many Threads Generator Group");

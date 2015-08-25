@@ -1,10 +1,10 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.BadThing;
+import com.dev9.crash.AbstractBadThing;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SimplySystemExit implements BadThing {
+public class SimplySystemExit extends AbstractBadThing {
     public String getBadThingDescription() {
         return "Try to shut down the server with System.exit().  This completely skips the normal server termination and can leave the server in an inconsistent state.";
     }

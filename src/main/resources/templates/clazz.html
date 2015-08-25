@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Crash Dummy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Crash Dummy</h1>
+
+
+<p th:text="${clazz}"></p>
+
+<p th:text="${clazzLocation}"></p>
+
+<p>
+
+<form action="#" th:action="@{/class}" method="post">
+
+    <!--@thymesVar id="clazz" type="String"-->
+    <input type="text" name="clazz" th:value="${clazz}"/>
+
+    <button type="submit" name="find">Find</button>
+</form>
+</p>
+
+<p><a href="/">Return To Main Page</a></p>
+
+<p>Hit these buttons to find classes as a demonstration:
+
+<form action="#" th:action="@{/class}" method="post">
+
+    <!--@thymesVar id="clazz" type="String"-->
+    <input type="hidden" name="clazz" th:value="com.dev9.crash.InfoController"/>
+
+    <button type="submit" name="find">com.dev9.crash.InfoController</button>
+</form>
+
+<form action="#" th:action="@{/class}" method="post">
+
+    <!--@thymesVar id="clazz" type="String"-->
+    <input type="hidden" name="clazz" th:value="java.lang.Object"/>
+
+    <button type="submit" name="find">java.lang.Object</button>
+</form>
+
+
+</p>
+
+</body>
+</html>
+

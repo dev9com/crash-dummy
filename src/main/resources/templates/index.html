@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Crash Dummy</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
+<<<<<<< HEAD
 <h1>Welcome to Crash Dummy!</h1>
+=======
+<h1>Crash Dummy</h1>
+
+>>>>>>> origin/master
 <table>
+    <tr>
+        <td>Item</td>
+        <td>Action</td>
+    </tr>
     <tr th:each="bad : ${allBadThings}">
         <td th:text="${{bad.badThingId}}">
             bad-thing-id
@@ -27,6 +36,10 @@
 
     </tr>
 </table>
+
+
+<p><a href="/server" th:href="@{/server}">Server Info</a></p>
+<p><a href="/server" th:href="@{/class}">Find Location of Class On Disk</a></p>
 </body>
 </html>
 

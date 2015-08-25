@@ -1,6 +1,6 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.BadThing;
+import com.dev9.crash.AbstractBadThing;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedInputStream;
@@ -9,7 +9,7 @@ import java.io.InputStream;
 import java.net.URL;
 
 @Service
-public class OpenConnections implements BadThing {
+public class OpenConnections extends AbstractBadThing {
 
     static int bytesRead = 0;
     static String urlToRead = "http://localhost:8080/";

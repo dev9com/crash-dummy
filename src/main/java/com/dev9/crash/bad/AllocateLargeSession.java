@@ -1,15 +1,15 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.WebBadThing;
+import com.dev9.crash.AbstractBadThing;
+import com.dev9.crash.BadThing;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 
 @Service
-public class AllocateLargeSession implements WebBadThing {
+public class AllocateLargeSession extends AbstractBadThing {
 
     private static long attributeCount = 0;
-    HttpServletRequest request;
 
     public String getBadThingDescription() {
         return "Places a very large lump of data in the user session.  Currently " + attributeCount
@@ -30,9 +30,5 @@ public class AllocateLargeSession implements WebBadThing {
         char[] data = new char[10000000];
         request.setAttribute("large" + attributeCount++, data);
         return "Added session data " + (attributeCount - 1);
-    }
-
-    public void setHttpRequest(HttpServletRequest request) {
-        this.request = request;
     }
 }

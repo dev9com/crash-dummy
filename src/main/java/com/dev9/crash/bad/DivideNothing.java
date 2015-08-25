@@ -1,10 +1,10 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.BadThing;
+import com.dev9.crash.AbstractBadThing;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DivideNothing implements BadThing {
+public class DivideNothing extends AbstractBadThing {
     public float divideByZero() {
         int x = 1;
         int y = 0;

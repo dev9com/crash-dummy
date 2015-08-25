@@ -1,10 +1,10 @@
 package com.dev9.crash.bad;
 
-import com.dev9.crash.BadThing;
+import com.dev9.crash.AbstractBadThing;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BogusJdbcDriver implements BadThing {
+public class BogusJdbcDriver extends AbstractBadThing {
 
     public String getBadThingDescription() {
         return "Looks for a made-up driver.";
