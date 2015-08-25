@@ -29,7 +29,7 @@ class HomeController {
 
     @ModelAttribute("allBadThings")
     List<BadThing> allBadThings() {
-        List result = new ArrayList<>(allBadThingsMap().values());
+        List<BadThing> result = new ArrayList<>(allBadThingsMap().values());
 
         return result;
     }

@@ -5,8 +5,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class NullPointerMaker implements BadThing {
-    public void generateNullPointer() {
-        new Person().getName().toString();
+    public String generateNullPointer() {
+        return new Person().getName().toString();
     }
 
     public String getBadThingDescription() {
@@ -23,8 +23,7 @@ public class NullPointerMaker implements BadThing {
     }
 
     public String doBadThing() throws Exception {
-        new NullPointerMaker().generateNullPointer();
-        return null;
+        return new NullPointerMaker().generateNullPointer();
     }
 
     class Person {

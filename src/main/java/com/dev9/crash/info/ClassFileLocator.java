@@ -5,7 +5,7 @@ import java.security.ProtectionDomain;
 
 public class ClassFileLocator {
     public String find(String canonicalName) {
-        Class clazz = null;
+        Class clazz;
         try {
             clazz = Class.forName(canonicalName);
         } catch (ClassNotFoundException e) {
